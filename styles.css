@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* General */
+:root {
+    /* Layout */
+    --mobile_size: 375px;
+    --dskTop_size: 1140px;
+    /* Colors */
+    --cyan: hsl(179, 62%, 43%);
+    --bright_yllw: hsl(71, 73%, 54%);
+    --light_gray: hsl(204, 43%, 93%);
+    --gray_blue: hsl(218, 22%, 67%);
+    /* Typo */
+    --fnt_size: 16px;
+    --fnt_Karla: 'Karla', sans-serif;
+    --fnt_Karla_400: 400;
+    --fnt_Karla_700: 700;
+}
+body {
+    font-size: var(--fnt_size);
+    font-family: var(--fnt_Karla);
+    background-color: var(--light_gray);
+    padding: 15vw 8vw;
+}
+section {
+    padding: 7%;
+}
+#white {
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+}
+#cyan {
+    font-size: 1.1rem;
+    background-color: var(--cyan);
+    color: white;
+}
+#lght_cyan {
+    background-color: hsl(179, 64%, 49%);
+    color: white;
+    border-radius: 0 0 5px 5px;
+}
+h1 {
+    color: var(--cyan);
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+h2 {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+h3 {
+    color: var(--bright_yllw);
+    padding: 0.5rem 0;
+}
+
+#white p {
+    color: var(--gray_blue);
+    line-height: 1.6rem;
+}
+#cyan div {
+    display: flex;
+    padding: 0.5rem 0;
+}
+#cyan #dollar_price {
+    font-size: 1.5rem;
+    font-weight: var(--fnt_Karla_700);
+}
+#cyan #per_month {
+    display: inline-block;
+    margin: 0.40em 0.7rem;
+    font-weight: var(--fnt_Karla_400);
+    font-size: 14px;
+    opacity: 0.8;
+    letter-spacing: 0.1rem;
+}
+#cyan a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--bright_yllw);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: var(--fnt_Karla_700);
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 1.8rem 0 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgb(0, 149, 149);
+}
+#lght_cyan ul {
+    list-style-type: none;
+}
+#lght_cyan li {
+    padding: 0.2rem 0;
+    font-weight: var(--fnt_Karla_400);
+}
+
+/* Footer */
+.attribution { 
+    font-size: 14px; 
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 800px) {
+    :root {
+        /* Colors */
+        --cyan: hsl(179, 62%, 43%);
+        --bright_yllw: hsl(71, 73%, 54%);
+        --light_gray: hsl(204, 43%, 93%);
+        --gray_blue: hsl(218, 22%, 67%);
+        /* Typo */
+        --fnt_size: 16px;
+        --fnt_Karla: 'Karla', sans-serif;
+        --fnt_Karla_400: 400;
+        --fnt_Karla_700: 700;
+    }
+    body {
+        padding: 0;
+        background-color: var(--light_gray);
+    }
+    main {
+        max-width: 45%;
+        margin: 5% auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #white {
+        grid-column: 1/3;
+    }
+    #cyan {
+        border-radius: 0 0 0 5px;
+    }
+    #lght_cyan {
+        border-radius: 0 0 5px 0;
+    }
+}
